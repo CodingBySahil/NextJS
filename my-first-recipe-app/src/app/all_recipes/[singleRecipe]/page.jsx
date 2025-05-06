@@ -1,3 +1,4 @@
+import Image from "next/image";
 
 const fetchSingleRecipe = async (id) => {
   try {
@@ -26,8 +27,7 @@ export default async function SingleRecipePage({ params }) {
   return (
     <div className="max-w-4xl mx-auto p-6 md:p-10 animate-fade-in">
       <div className="bg-white shadow-2xl rounded-2xl overflow-hidden transition-all hover:shadow-3xl">
-        <img
-          src={recipe.image}
+        <Image
           alt={recipe.name}
           className="w-full h-72 md:h-96 object-cover"
         />

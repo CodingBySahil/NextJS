@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const fetchAllRecipes = async () => {
@@ -26,7 +27,7 @@ export default async function AllRecipesPage() {
           {recipes.map((recipe) => (
             <Link href={`/all_recipes/${recipe.id}`} key={recipe.id}>
               <div className="group bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer">
-                <img
+                <Image
                   src={recipe.image}
                   alt={`Image of ${recipe.name}`}
                   className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
