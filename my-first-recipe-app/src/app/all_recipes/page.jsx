@@ -30,6 +30,9 @@ export default async function AllRecipesPage() {
                 <Image
                   src={recipe.image}
                   alt={`Image of ${recipe.name}`}
+                  width={500}
+                  height={300}
+                  
                   className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
                   loading="lazy"
                 />

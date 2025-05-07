@@ -27,10 +27,13 @@ export default async function SingleRecipePage({ params }) {
   return (
     <div className="max-w-4xl mx-auto p-6 md:p-10 animate-fade-in">
       <div className="bg-white shadow-2xl rounded-2xl overflow-hidden transition-all hover:shadow-3xl">
-        <Image
-          alt={recipe.name}
-          className="w-full h-72 md:h-96 object-cover"
-        />
+      <Image
+  src={recipe.image}
+  alt={recipe.name}
+  width={800}
+  height={600}
+  className="w-full h-72 md:h-96 object-cover"
+/>
         <div className="p-6 md:p-8">
           <h1 className="text-4xl font-extrabold text-gray-900 mb-4 tracking-tight">
             {recipe.name}
