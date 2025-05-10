@@ -1,8 +1,11 @@
+import Hero from "@/components/hero";
+import Navbar from "@/components/navbar";
 
 export default function Home() {
   return (
-    <h1>
-      hello and welcome to hair salon
-    </h1>
+    <section className="relative">
+      <Navbar />
+      <Hero />
+    </section>
   );
 }
