@@ -3,10 +3,10 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative md:min-h-screen min-h-fit w-full bg-[#f7e135] overflow-hidden flex items-center">
+    <section className="relative md:min-h-screen min-h-fit w-full bg-[#f7e135] overflow-hidden flex">
       <div className="grid grid-cols-1 md:grid-cols-2 w-full">
         {/* Left Content */}
-        <div className="flex flex-col justify-center items-center md:items-start px-6 md:px-16 py-20 text-center md:text-left">
+        <div className="flex flex-col justify-center items-center md:items-start px-6 md:px-16 py-16 md:py-20 text-center md:text-left">
           <span className="bg-black text-[#f7e135] px-3 py-1 text-sm font-semibold w-fit mb-4">
             #FIXMYHAIR
           </span>
@@ -24,7 +24,7 @@ export default function Hero() {
           </Link>
 
           {/* Mobile Image */}
-          <div className="relative w-full h-[350px] bg-[#f7e135] mt-8 md:hidden">
+          <div className="relative w-full h-[350px] bg-[#f7e135] mt-6 md:hidden">
             <Image
               src="/hero_page_model.png"
               alt="Hair Model"

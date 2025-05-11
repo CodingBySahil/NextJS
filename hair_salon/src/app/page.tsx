@@ -1,5 +1,6 @@
 import Hero from "@/components/hero";
 import Navbar from "@/components/navbar";
+import FeaturesSection from "@/components/FeaturesSection";
 import Image from "next/image";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
         height={0}
         sizes="100vw"
       />
+      <FeaturesSection />
     </div>
   );
 }
