@@ -24,17 +24,14 @@ export default function Navbar() {
   return (
     <Disclosure
       as="nav"
-      className="absolute top-0 left-0 w-full z-30 bg-white/90 backdrop-blur-md border-b border-gray-200"
+      className="fixed top-0 left-0 w-full z-30 bg-white/90 backdrop-blur-md border-b border-gray-200 h-16"
     >
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex h-16 items-center justify-between">
-              {/* Logo */}
-
               <Image src="/logo.png" alt="FixMyHair" width={90} height={90} />
 
-              {/* Navigation */}
               <div className="hidden sm:flex space-x-8">
                 {navigation.map((item) => (
                   <Link
@@ -52,7 +49,6 @@ export default function Navbar() {
                 ))}
               </div>
 
-              {/* Book Now Button */}
               <div className="hidden sm:block">
                 <Link
                   href="booknow"
@@ -62,7 +58,6 @@ export default function Navbar() {
                 </Link>
               </div>
 
-              {/* Mobile Menu */}
               <div className="sm:hidden">
                 <DisclosureButton className="text-black hover:text-gray-600 focus:outline-none">
                   {open ? (
