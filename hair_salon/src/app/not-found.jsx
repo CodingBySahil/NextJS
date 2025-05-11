@@ -1,7 +1,10 @@
 import Link from "next/link";
+import Navbar from "@/components/navbar";
 
 export default function NotFound() {
     return (
+      <div>
+      <Navbar/>
       <div className="flex flex-col items-center justify-center h-screen bg-gradient-to-br from-pink-100 via-purple-50 to-blue-100 p-6">
         <h1 className="text-4xl md:text-5xl font-extrabold text-gray-800 text-center mb-6">
           Oops! Page Not Found
@@ -16,6 +19,7 @@ export default function NotFound() {
         >
           Go Back Home
         </Link>
+      </div>
       </div>
     );
   }
