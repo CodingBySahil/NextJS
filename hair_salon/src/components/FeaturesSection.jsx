@@ -32,19 +32,17 @@ const features = [
 
 export default function FeaturesSection() {
   return (
-    <section className="bg-white py-10 px-4 md:px-12 lg:px-20">
+    <section className="bg-white py-10 px-4 md:px-12 lg:px-20 md:py-10 lg:py-18 md:mt-10 lg:mt-18">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {features.map((item, index) => (
           <div
-  key={index}
-  className={`relative rounded-xl border border-black shadow-lg p-6 pt-0 bg-white ${
-    index === 1 ? "md:mt-8" : ""
-  } mb-16 md:mb-0`} // 👈 Add margin bottom on mobile only
->
-
+            key={index}
+            className={`relative rounded-xl border border-black shadow-lg p-6 pt-0 bg-white ${
+              index === 1 ? "md:mt-8" : ""
+            } mb-16 md:mb-0`} // 👈 Add margin bottom on mobile only
+          >
             {/* Title */}
             <div className="w-full bg-black text-yellow-400 rounded-b-xl px-4 py-3 text-center font-bold text-sm sm:text-base mt-4">
-
               {item.title}
             </div>
 
