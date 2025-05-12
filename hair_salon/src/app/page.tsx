@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="relative">
       <Navbar />
-      <main className="pt-16">
+      <main className="">
         {" "}
         {/* Push content down below navbar height */}
         <Hero />
