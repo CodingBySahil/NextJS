@@ -3,6 +3,7 @@ import Navbar from "@/components/navbar";
 import FeaturesSection from "@/components/FeaturesSection";
 import BloodAnalysisSection from "@/components/BloodAnalysisSection";
 import Image from "next/image";
+import HairTransplantCarousel from "@/components/HairTransplantCarousel";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       />
       <FeaturesSection />
       <BloodAnalysisSection />
+      <HairTransplantCarousel />
     </div>
   );
 }
