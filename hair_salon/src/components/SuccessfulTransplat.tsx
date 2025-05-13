@@ -100,12 +100,12 @@ export default function SuccessfulTransplants() {
     return () => window.removeEventListener("resize", calculateVisibleCards);
   }, []);
 
-  // Autoplay (every 4s)
+  // Autoplay (every 3s)
   useEffect(() => {
     const interval = setInterval(() => {
       const maxIndex = totalSlides - Math.ceil(visibleCards);
       setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
-    }, 2500);
+    }, 3000);
     return () => clearInterval(interval);
   }, [visibleCards, totalSlides]);
 
