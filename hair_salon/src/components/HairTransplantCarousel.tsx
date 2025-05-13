@@ -30,13 +30,14 @@ export default function HairTransplantCarousel() {
     setIndex((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
 
   return (
-    <section className="bg-white px-4 sm:px-8 lg:px-20 h-screen flex flex-col justify-between">
-      {/* Header with Controls */}
-      <div className="flex justify-between items-center pt-10">
-        <h2 className="text-2xl sm:text-4xl font-bold text-black  w-full">
+    <section className="bg-white px-4 sm:px-8 lg:px-20 h-screen flex flex-col justify-between py-10">
+      {/* Header and Controls */}
+      <div className="flex items-center justify-between mb-6">
+        <h2 className="text-2xl sm:text-4xl font-bold text-black">
           Hair Transplant FUE & FUT
         </h2>
-        <div className="absolute right-6 sm:right-20 flex gap-2 sm:gap-4">
+
+        <div className="flex gap-2 sm:gap-4">
           <button
             onClick={prevSlide}
             aria-label="Previous Slide"
@@ -54,8 +55,8 @@ export default function HairTransplantCarousel() {
         </div>
       </div>
 
-      {/* Image Area */}
-      <div className="relative w-full max-w-6xl mx-auto flex-1 flex items-center justify-center overflow-hidden rounded-xl border border-black/10">
+      {/* Image Carousel */}
+      <div className="relative w-full max-w-6xl mx-auto flex-1 flex items-center justify-center overflow-hidden rounded-xl ">
         {/* Desktop Image */}
         <Image
           src={slides[index].desktop}
@@ -75,16 +76,18 @@ export default function HairTransplantCarousel() {
           priority
         />
 
-        {/* Slide Indicators Overlaid */}
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-3">
-          {slides.map((_, i) => (
-            <span
-              key={i}
-              className={`w-6 h-6 rounded-full border border-black transition-all duration-300 ${
-                i === index ? "bg-black" : "bg-white"
-              }`}
-            />
-          ))}
+        {/* Slide Indicators */}
+        <div className="absolute bottom-5 w-full px-4 sm:px-6">
+          <div className="max-w-md mx-auto flex justify-center gap-3">
+            {slides.map((_, i) => (
+              <span
+                key={i}
+                className={`w-8 sm:w-10 h-3 rounded-full border border-black transition-all duration-300 ${
+                  i === index ? "bg-black" : "bg-white"
+                }`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
