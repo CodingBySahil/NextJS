@@ -33,10 +33,14 @@ export default function HairTransplantCarousel() {
     setIndex((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
   };
 
-  // Auto-play every 6 seconds
+  // Auto-play every 3 seconds
   useEffect(() => {
     intervalRef.current = setInterval(nextSlide, 3000);
-    return () => intervalRef.current && clearInterval(intervalRef.current);
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
   }, []);
 
   // Keyboard navigation
