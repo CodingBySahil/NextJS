@@ -5,6 +5,7 @@ import BloodAnalysisSection from "@/components/BloodAnalysisSection";
 import Image from "next/image";
 import HairTransplantCarousel from "@/components/HairTransplantCarousel";
 import SuccessfulTransplat from "@/components/SuccessfulTransplat";
+import HowItWorks from "@/components/HowItWorks";
 
 
 export default function Home() {
@@ -28,6 +29,7 @@ export default function Home() {
       <BloodAnalysisSection />
       <HairTransplantCarousel />
       <SuccessfulTransplat/>
+      <HowItWorks/>
     </div>
   );
 }
