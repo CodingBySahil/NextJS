@@ -6,6 +6,7 @@ import Image from "next/image";
 import HairTransplantCarousel from "@/components/HairTransplantCarousel";
 import SuccessfulTransplat from "@/components/SuccessfulTransplat";
 import HowItWorks from "@/components/HowItWorks";
+import ComparisonTable from "@/components/ComparisonTable";
 
 
 export default function Home() {
@@ -30,6 +31,7 @@ export default function Home() {
       <HairTransplantCarousel />
       <SuccessfulTransplat/>
       <HowItWorks/>
+      <ComparisonTable/>
     </div>
   );
 }
